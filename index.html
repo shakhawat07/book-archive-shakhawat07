@@ -10,46 +10,54 @@
     <!-- bootstrap stylesheets  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    <!-- css stylesheets  -->
     <style>
-        /* .book {
-            border: 2px solid tomato;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 10px;
-        } */
+        body {
+            /* fixed background image  */
+            background: url(images/background.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
     </style>
 </head>
 
 <body>
     <!-- header  -->
-    <header class="my-4">
-        <h2 class="p-2 bg-success bg-opacity-75 text-white text-center w-50 mx-auto mb-4">Book Library</h2>
-
-        <!-- book search area  -->
-        <div class="input-group mb-3 w-50 mx-auto">
-            <input id="search-field" type="text" class="form-control" placeholder="search the book you want"
-                aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button onclick="searchBook()" class="btn btn-outline-secondary mx-3" type="button"
-                id="button-search">Search</button>
-        </div>
+    <header class="mb-4">
+        <nav class="navbar navbar-light bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white fs-1 fst-italic fw-bolder mx-4">Book Library</a>
+                <form class="d-flex">
+                    <!-- book search area  -->
+                    <input id="search-field" class="form-control me-4" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button onclick="searchBook()" class="btn btn-outline-light me-4" type="button"
+                        id="button-search">Search</button>
+                </form>
+            </div>
+        </nav>
     </header>
     <!-- main  -->
     <main>
+        <!-- welcome area -->
+        <div class="text-center mt-5">
+            <h4 class="mb-3 text-white fw-bolder fst-italic">Are you searching for a book...?</h4>
+            <h1 class="mb-3 text-black fw-bolder fst-italic">Welcome to our biggest books Library</h1>
+        </div>
         <!-- total search show -->
-        <div id="total-results" class="mx-5 mb-3">
+        <div id="total-results" class="mx-auto">
         </div>
         <!-- no books found  -->
-        <div id="noBooks-found" class="mx-5 mb-3 text-center text-danger">
+        <div id="noBooks-found" class="mx-auto">
         </div>
         <!-- books information show  -->
         <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4 mx-5">
         </div>
     </main>
     <!-- footer  -->
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <!-- javascript  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
